@@ -1,5 +1,10 @@
 <% this.title = show_user.username + ' - 用户'; %>
 <% include header %>
+<%
+    var myname=syzoj.config.myname.split("=");
+    var myfg=syzoj.config.myfg.split("=");
+    var mycol=syzoj.config.mycol.split("=");
+%>
 <style>
 #avatar_container:before {
     content: "";
