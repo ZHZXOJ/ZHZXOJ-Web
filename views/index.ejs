@@ -1,5 +1,10 @@
 <% this.title = '首页'; %>
 <% include header %>
+<%
+    var myname=syzoj.config.myname.split("=");
+    var myfg=syzoj.config.myfg.split("=");
+    var mycol=syzoj.config.mycol.split("=");
+%>
 <div class="padding">
   <div class="ui three column grid">
     <div class="eleven wide column">
@@ -52,7 +57,15 @@
             %>
                 <tr>
                     <td><b><%= i %></b></td>
-                    <td><a href="<%= syzoj.utils.makeUrl(['user', user.id]) %>"><%= user.username %></a><% if (user.nameplate) { %><%- user.nameplate %><% } %></td>
+                    <td><a href="<%= syzoj.utils.makeUrl(['user', user.id]) %>"><%= user.username %></a><% if (user.nameplate) { %><%- user.nameplate %><% } %>
+                      <%
+                        if(myname[user.id]==user.id) {
+                      %>
+                        <div class="ui <%= mycol[user.id] %> label"><%= myfg[user.id] %></div>
+                      <% } else { %>
+                        
+                      <% } %>
+                    </td>
                     <td style="font-content">
                       <script id="user-infomation-script-<%= i %>" data-cfasync="false">
                       (function () {
