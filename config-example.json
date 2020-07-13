@@ -1,5 +1,8 @@
 {
   "title": "SYZOJ",
+  "myname": "#null",
+  "myfg": "#null",
+  "mycol": "#null",
   "hostname": "127.0.0.1",
   "port": "5283",
   "db": {
