@@ -72,6 +72,7 @@
               <% if (user) { %>
               <a href="<%= syzoj.utils.makeUrl(['user', user.id]) %>" style="color: inherit; ">
               <div class="ui simple dropdown item">
+                <a class="header item" href="<%= syzoj.utils.makeUrl(['user', user.id]) %>"><img class="ui avatar image" src="<%= syzoj.utils.gravatar(user.email, 1000) %>"></a>
                 <%= user.username %><% if (user.nameplate) { %><%- user.nameplate %><% } %> <i class="dropdown icon"></i>
                 <div class="menu">
                   <a class="item" href="<%= syzoj.utils.makeUrl(['user', user.id, 'edit']) %>"><i class="edit icon"></i>修改资料</a>
