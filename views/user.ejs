@@ -1,10 +1,5 @@
 <% this.title = show_user.username + ' - 用户'; %>
 <% include header %>
-<%
-    var myname=syzoj.config.myname.split("=");
-    var myfg=syzoj.config.myfg.split("=");
-    var mycol=syzoj.config.mycol.split("=");
-%>
 <style>
 #avatar_container:before {
     content: "";
@@ -30,9 +25,9 @@
                     <img style="margin-top: -100%; " src="<%= syzoj.utils.gravatar(show_user.email, 1000) %>">
                 </div>
                 <div class="content">
-                    <div class="header"><%= show_user.username %><% if (show_user.nameplate) { %><%- show_user.nameplate %><% } %> <% if(myname[show_user.id]==show_user.id) { %><div class="ui <%= mycol[show_user.id] %> label"><%= myfg[show_user.id] %></div><% } if (show_user.sex == 1) { %><i class="man icon"></i><% } else if (show_user.sex == -1) { %><i class="woman icon"></i><% } %></div>
+                    <div class="header"><%= show_user.username %><% if (show_user.nameplate) { %><%- show_user.nameplate %><% } %> <% if(show_user.tg_name && show_user.tg_color) { %><div class="ui <%= show_user.tg_color %> label"><%= show_user.tg_name %></div><% } if (show_user.sex == 1) { %><i class="man icon"></i><% } else if (show_user.sex == -1) { %><i class="woman icon"></i><% } %></div>
                     <div class="meta">
-                        <a class="group"><%= show_user.is_admin ? '管理员' : '普通用户' %></a>
+                        <a class="group"><%= show_user.is_admin ? '站长团' : ( ban ? '封禁用户' : '普通用户' )%></a>
                     </div>
                 </div>
                 <div class="extra content">
