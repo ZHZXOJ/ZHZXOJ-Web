@@ -27,7 +27,7 @@
                 <div class="content">
                     <div class="header"><%= show_user.username %><% if (show_user.nameplate) { %><%- show_user.nameplate %><% } %> <% if(show_user.tg_name && show_user.tg_color) { %><div class="ui <%= show_user.tg_color %> label"><%= show_user.tg_name %></div><% } if (show_user.sex == 1) { %><i class="man icon"></i><% } else if (show_user.sex == -1) { %><i class="woman icon"></i><% } %></div>
                     <div class="meta">
-                        <a class="group"><%= show_user.is_admin ? '站长团' : ( ban ? '封禁用户' : '普通用户' )%></a>
+                        <a class="group"><%= show_user.is_admin ? '站长团' : ( show_user.is_show ? '封禁用户' : '普通用户' )%></a>
                     </div>
                 </div>
                 <div class="extra content">
