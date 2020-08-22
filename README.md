@@ -28,7 +28,7 @@ error_page 404 https://$server_name/404?code=404-NOF;
 ```
 
 ## 用户标签（首页、个人主页、排行榜）
-请在`user`表中插入`tg_name`和`tg_color`字段，并将其默认值为`null`。
+可以使用`nameplate`字段，为了方便操作管理，该分支在`user`表中插入了`tg_name`和`tg_color`字段。
 ```
 tg_name:标签内容
 tg_color:标签颜色
