@@ -1,6 +1,7 @@
 {
   "title": "SYZOJ",
   "hostname": "127.0.0.1",
+  "all_dark": "0",
   "port": "5283",
   "db": {
     "database": "syzoj",
