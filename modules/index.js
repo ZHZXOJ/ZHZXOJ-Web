@@ -78,14 +78,3 @@ app.get('/404', async (req, res) => {
     });
   }
 });
-
-app.use(function(req,res){
-  try {
-  res.render('404');
-} catch (e) {
-  syzoj.log(e);
-  res.render('error', {
-    err: e
-  });
-}
-});
