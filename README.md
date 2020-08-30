@@ -18,15 +18,6 @@ ssl_certificate_key  *.key;
 #error_page 497  https://$host$request_uri;
 ```
 
-## 若要使用错误响应页面，请在oj的nginx配置文件中加入以下语句
-```
-proxy_intercept_errors on;
-error_page 404 https://$server_name/404?code=404-NOF;
-#以下为可选项
-#access_log  access.log;
-#error_log  error.log;
-```
-
 ## 用户标签（首页、个人主页、排行榜）
 可以使用`nameplate`字段，为了方便操作管理，该分支在`user`表中插入了`tg_name`和`tg_color`字段。
 ```
