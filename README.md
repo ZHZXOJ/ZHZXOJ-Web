@@ -1,5 +1,5 @@
 # ZHZXOJ-Web
-基于SYZOJ前端改版，现在仍在开发ing
+基于SYZOJ前端改版，现在已弃坑
 
 ## 若要使用https，请在oj的nginx配置文件中加入以下语句
 ```
